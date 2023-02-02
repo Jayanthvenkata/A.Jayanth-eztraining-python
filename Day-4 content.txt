@@ -1,0 +1,141 @@
+1)d={n:n*n for n in range(1,5)}
+  print(d)
+  
+  old={'rice':60,'dhaal':120,'oil':150}
+  new={product:price*5 for (product,price)in
+       old.items()}
+  print(new)
+
+  real={'sam':24,'angel':18,'kumar':35}
+  now={name:age for (name,age) in real.items()
+       if age>20}
+  print(now)
+
+
+2)create a list with 8 customers names.display and dictionary which as
+  customers names along with discounts for them from a particular shop?
+program:
+  import random
+  l=["ANIL","JAY","RAJ","KUMAR","NAIDU","BHUVAN","SURYA","SAI"]
+  l_dict={names:random.randint(1,100) for names in l}
+  print(l_dict)
+
+
+
+3)L1=['a','b','c']
+  L2=[1,2,3]
+  d={a:b for (a,b) in zip(L1,L2)}
+  print(d)
+
+
+4)Create two list first list should have 5 students,2ndlist total marks,
+ create dictionary student name as keys percentage as values
+Program:
+   students=["ANIL","JAY","RAJ","KUMAR","NAIDU"]
+   marks=[500,499,480,330,250]
+   d={name:(percnt/500)*100 for(name,percnt) in zip(students,marks)}
+   print(d)
+
+
+
+Examples:
+>>>n="hi i'am "jayanth""
+ SyntaxError: invalid syntax
+>>>n="hi i'am"
+>>>n
+ "hi i'am"
+>>>nm='hi i'a'
+ SyntaxError: unterminated string literal (detected at line 1)
+>>>m='hi i\'am'
+>>>m
+ "hi i'am"
+
+
+CONCATE S1+S2
+
+features of string:
+s.upper()
+s.lower()
+s.capitalize()
+s.replace('h".a')
+s.strip()
+s.count('a')
+s.count('a',5.len(s))
+
+
+>>>max("a,b,c")
+'c'
+>>>min("a,b,c")
+','
+
+Examples:
+  s='A.V.N.S.JAYANTH'
+  print(s.uppe5r())
+  print(s.lower())
+  print(s.capitalize())
+  print(s.replace('H','A'))
+  print(s.strip())
+  print(s.split())
+  print(s.center(31,'*'))
+  print(s.split('A'))
+  print(s.count('A'))
+  print(s.count('A',5,len(s)))
+  print(s.endswith('A',0,len(s)))
+  print(s.find('A',0,len(s)))
+  print(s.index('A',7,len(s)))
+  print(s.islower())
+  print(s.isupper())
+  print(s.istitle())
+  print(s.startswith('hello',0,len(s)))
+  print(s.rfind('A',0,len(s)))
+ OUTPUT:
+  A.V.N.S.JAYANTH
+  a.v.n.s.jayanth
+  A.v.n.s.jayanth
+  A.V.N.S.JAYANTA
+  A.V.N.S.JAYANTH
+  ['A.V.N.S.JAYANTH']
+  ********A.V.N.S.JAYANTH********
+  ['', '.V.N.S.J', 'Y', 'NTH']
+  3
+  2
+  False
+  0
+  9
+  False
+  True
+  False
+  False
+  11
+
+5) get a string and character  as input .
+ find out and display whether a particular character
+PROGRAM:
+  s=input('enter a string')
+  c=input("enter a character")
+  if c in s:
+      print("yes it was right")
+  else:
+      print("no it was wrong")
+
+6) check whether the given number is palindrome or not?
+PROGRAM:
+  s=input("Enter a string")
+  k=s[::-1]
+  print(s,k)
+  if (s==k):
+      print("palindrome")
+  else:
+      print("not palindrome")
+7) agter getting one string as input check the string contains space or not
+ if yes, count number of spaces in a string
+PROGRAM:
+  s=(input("enter a string:"))
+  p=0
+  for i in s:
+      if i==' ':
+          p+=1
+  if p!=0:
+      print("no of spaces",p)
+  else:
+      print("no spaces")
