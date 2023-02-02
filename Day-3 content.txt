@@ -1,0 +1,149 @@
+LIST[]
+EXAMPLE:
+>>>l=[1,4,7.4,"jayanth"]
+
+>>>l[3]
+'jayanth'
+
+>>>l[0]
+1
+
+>>>l[-1]
+'jayanth'
+
+>>>l[:3]
+[1, 4, 7.4]
+
+>>>l[::-1]
+['jayanth', 7.4, 4, 1]
+
+>>>l[1:2]
+[4]
+
+Various list functions:
+
+append()-add an element to the end of list
+extend()-add all elements of a list to the another list
+insert()-insert an item at the defined index
+remove()-remove an element from the list
+clear()-remove all items from the list
+index()-returns the index of the first matched item
+sort()-sort items in a list in ascending order
+reverse()-reverse the order of items in the list
+pop()-removes and returns an element in a list
+
+Examples:
+
+>>>l=[1,4,4,2,2,3,6,7,8]
+
+>>>l.append(50)
+>>>l
+[1, 4, 4, 2, 2, 3, 6, 7, 8, 1, 50]
+>>>l.count(4)  
+2
+
+>>>len(l)
+11
+
+>>>l.remove(4)
+>>>l
+[1, 4, 2, 2, 3, 6, 7, 8, 1, 50]
+
+>>> l.extend([100,200,300])
+>>>l
+[1, 4, 2, 2, 3, 6, 7, 8, 1, 50, 100, 200, 300]
+
+
+
+SETS{}:
+  s.add(element)
+  s.update([20,40])
+  s.discard(element)
+  s.remove(element)
+ 
+>>>s={1,2,3,4,5,6,7,8,9}
+>>>s
+{1, 2, 3, 4, 5, 6, 7, 8, 9}
+>>>s.add(10)
+>>>s
+{1, 2, 3, 4, 5, 6, 7, 8, 9, 10}
+>>>s.update([20,40])
+s
+{1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 40, 20}
+>>>s.discard(20)
+>>>s
+{1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 40}
+>>>s.remove(10)
+>>>s
+{1, 2, 3, 4, 5, 6, 7, 8, 9, 40}
+
+s1={1,2,3}
+s2={4.5,6,1.2}
+s1|s2 (or) s1.union(s2)
+s1&s2 (or) s1.intersection(s2)
+s1-s2 (or) s1.difference(s2)
+
+program:
+s={1,2,3}
+s1={1,2,3,4}
+s2=s1.issuperset(s)
+print(s2)
+
+Examples:
+s1={1,2,3,5,10}
+s2={4,1,9,2,10}
+s1^s2
+{3, 4, 5, 9}
+print(s1.symmetric_difference(s2))
+{3, 4, 5, 9}
+
+TUPLE(): 
+t=(1,2,3)
+>>>t.index(10)
+
+Examples:
+>>>t=(4,3,4,9,6,"jayanth")
+>>>type(t)
+<class 'tuple'>
+
+>>>t.count(4)
+2
+>>>t.index(4)
+0
+
+DICTIONARY:
+1)Dictionary contains element with two units key and values
+2)keys must be unique
+
+>>>d={1:"one",2:"two"}
+>>>d
+{1: 'one', 2: 'two'}
+>>>type(d)
+<class 'dict'>
+>>>d.keys()
+dict_keys([1, 2])
+>>>d.values()
+dict_values(['one', 'two'])
+>>>d.items()
+dict_items([(1, 'one'), (2, 'two')])
+
+>>>d={'syl':'techno','chaaru':'meizu'}
+>>>type(d)
+<class 'dict'>
+>>>d.keys()
+dict_keys(['syl', 'chaaru'])
+>>>d.values()
+dict_values(['techno', 'meizu'])
+
+
+
+>>>d={1:"one",2:"two"}
+>>>d.pop(2)
+'two'
+>>>d.popitem()
+(1, 'one')
+
+d.items()
+d.update()
+d.pop()
+d.popitem()
