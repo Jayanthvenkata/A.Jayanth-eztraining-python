@@ -1,0 +1,245 @@
+LAMBDA function:
+    it is called as anonymous function when we want to use function 
+concept withhout using function name.these we applied concept of lambda function.
+PROGRAM:
+L=[1,2,3]
+r=map(lambda x:x+x,L)
+print(list(r))
+
+res=map(lambda n:pow(n,2),L)
+print(list(res))
+
+
+name="jayanth"
+(lambda name:print(name)) (name)
+
+pillers of oops:
+1.abstraction
+2.encapsulation
+3.inheritance
+4.polymorphism
+
+1)Abstraction:
+   -hidind the implementation part showing what is require for this uses is calles abstraction
+ex:exe file
+-we can make class or method as abstract opposite to abstract is concrete.
+  from abc import ABC,abstractmethod
+EXAMPLE:
+class abstractdemo(ABC):
+    @abstractmethod
+    def display(self):
+        None
+    @abstractmethod
+    def show(self):
+        None
+class demo(abstractdemo):
+    def display(self):
+        print("Abstraction method")
+    def show(self):
+        print("2nd function")
+obj=demo()
+obj.display()
+obj.show()
+OUTPUT:
+Abstraction method
+2nd function
+
+
+2)Encapsulation:
+       --binding data and function into a single party.
+ public--one class info can be accessed by any other class.
+ private--can used where iy is declared/no in inheritance class
+ protected-- can be accessed only where it got declared--whichever class 
+              inherited from this class there also we can use.
+3)inheritance:
+     --Base class and Derived class
+             Derived class will inherit properties of Base class
+Base class-parent class
+Derived class-child class
+ Types of inheritance
+ 1)single inheritance
+ 2)multiple inheritance
+ 3)multi level inheritance
+ 4)heirerical inheritance
+ 5)hybrid inheritance
+
+ 1)single inheritance:
+PROGRAM:
+  #one parent and one child class
+class parent:
+    def display(self):
+        print("parent class")
+#Derived class
+class child(parent):
+    def show(self):
+        print("child class")
+c=child()
+c.display()
+c.show()
+ OUTPUT:
+  parent class
+  child class
+EXAMPLE:
+  class A:
+      n=30
+  class B(A):
+      def calc(self):
+          c=self.n+70
+          print(c)
+  obj=B()
+  obj.calc()
+OUTPUT:
+  100
+2)multiple inheritance:
+PROGRAM:
+ class mom:
+    def mdisplay(self):
+        print("mom class")
+class dad:
+    def ddisplay(self):
+        print("dad class")
+class child(mom,dad):
+    def cdisplay(self):
+        print("child class")
+c1=child()
+c1.cdisplay()
+c1.mdisplay()
+c1.ddisplay()
+OUTPUT:
+  child class
+  mom class
+  dad class
+3)multi level:
+  PROGRAMS:
+    class grandparent:
+    def display(self):
+        print("grand parent class")
+class parent(grandparent):
+    def show(self):
+        print("parent class")
+class child(parent):
+    def printing(self):
+        print("child class")
+c=child()
+c.display()
+c.show()
+c.printing()
+OUTPUT:
+  grand parent class
+  parent class
+  child class
+4)hererical inheritance:
+PROGRAM:
+class parent:
+    def pdisplay(self):
+        print("parent class")
+class child1(parent):
+    def c1show(self):
+        print("child1 class")
+class child2(parent):
+    def c2show(self):
+        print("child2 class")
+c1=child1()
+c1.c1show()
+c1.pdisplay()
+c2=child2()
+c2.c2show()
+c2.pdisplay()
+OUTPUT:
+  child1 class
+  parent class
+  child2 class
+  parent class
+5)hybrid inheritance:
+PROGRAM:
+class parent:
+    def pdisplay(self):
+        print("parent class")
+class child1(parent):
+    def c1show(self):
+        print("child1 class")
+class child2(parent):
+    def c2show(self):
+        print("child2 class")    
+
+class kid1(child1):
+    def k1display(self):
+        print("kid1 class")
+
+class kid2(child1):
+    def k2display(self):
+        print("kid2 class")
+class kidd1(child2):
+
+    def k1show(self):
+        print("kidd1 class")        
+class kidd2(child2):
+    def k2show(self):
+        print("kidd2 class")
+        
+c1=kid1()
+c1.k1display()
+c1.c1show()
+c1.pdisplay()
+c2=kid2()
+c2.k2display()
+c2.c1show()
+c2.pdisplay()
+c3=kidd1()
+c3.k1show()
+c3.c2show()
+c3.pdisplay()
+c4=kidd2()
+c4.k2show()
+c4.c2show()
+c4.pdisplay()
+OUTPUT:
+  kid1 class
+  child1 class
+  parent class
+  kid2 class
+  child1 class
+  parent class
+  kidd1 class
+  child2 class
+  parent class
+  kidd2 class
+  child2 class
+  parent class
+
+#happy numbers
+def Happy(num):
+    rem=sum=0
+    while(num>0):
+        rem=num%10
+        sum=sum+(rem*rem)
+        num=num//10
+    return sum
+num=int(input("enter a number:"))
+res=num
+   
+while(res!=1 and res!=4):
+    res=Happy(res) 
+
+
+if(res==1):    
+    print(str(num)+" is a happy number")
+elif(res==4):
+    print(str(num)+" is not a happy number")
+OUTPUT:
+enter a number:13
+13 is a happy number
+
+
+enter a number:97
+97 is a happy number
+
+
+enter a number:86
+86 is a happy number
+
+
+
+        
+
+
