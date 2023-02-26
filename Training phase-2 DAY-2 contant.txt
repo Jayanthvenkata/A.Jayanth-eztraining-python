@@ -1,0 +1,74 @@
+ polymorphism
+           one item used for multiple purposes
+                         there are two types
+                                    1.overloading     a.operator overloading   b.method overloading
+                                    2.over riding  """
+#method overloading
+class moverload:
+    def display(self,a=None,b=None):
+        print(a,b)
+s=moverload()
+s.display()
+s.display(2,3)
+s.display(5)
+
+
+
+DATA STRUCTURES
+
+  -HELPS TO WRITE EFFICIENT PROGRAMS
+  -LINEAR --ARRAY,LINKEDLIST,STACK,QUEUE,MATRIX
+  -NON LINER --BINARY TREE,HEAP,HASH TABLE/GRAPH
+  LINEAR-STORES DATA SEQUENTIALLY     STATIC AND DYNAMIC
+  NONLINEAR- NO SEQUENTIAL STYLE REQUIRED    GRAPHS AND TREES
+
+
+STATIC ---->ARRAY
+DYNAMIC---->LIST,STACK,QUEUE
+
+LINKED LIST==
+    REAL TIME EXAMPLE TRAIN
+    AS THE NAME SAYS LIST OF ITEMS WHICH ARE LINKED WITH ONE ANOTHER IS CALLED AS LINKED LIST.
+
+    TYPES ----> SINGLY/DOUBLE/CIRCULAR
+
+    SIMPLE LINKED LIST:
+
+ ###creating linked list
+                              step1 create the node
+                                 step2 partition the node with data and none
+                                 step3 add value into the blank node
+                                 step4 mark the node as head
+                                 step5 create the next node by following above steps
+                                 step6 establish links between first and second node
+                            
+###displaying linked list
+
+                              ''' traversal is required for first node till tail node in order to display existing linked list'''
+
+
+
+PROGRAMS:
+class Node:
+    def __init__(self,data):
+        self.data=data
+        self.next=None
+class singlelinkedlist:
+    def __init__(self):
+        self.head=None
+    def display(self):
+        if self.head is None:
+            prinht("Linked list is empty")
+        else:
+            temp=self.head
+            while temp:
+                print(temp.data,"-> ",end="")
+                temp=temp.next
+obj=singlelinkedlist()
+n=Node(10)
+obj.head=n
+n1=Node(20)
+obj.head.next=n1
+n2=Node(30)
+n1.next=n2
+obj.display()
